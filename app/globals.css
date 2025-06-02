@@ -1,26 +1,77 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import "tailwindcss";
+@font-face {
+  font-family: iransansBlack;
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/IRANSansWeb_Black.eot");
+  src: url("/fonts/IRANSansWeb_Black.eot?#iefix") format("embedded-opentype"),
+    /* IE6-8 */ url("/fonts/IRANSansWeb_Black.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("/fonts/IRANSansWeb_Black.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("/fonts/IRANSansWeb_Black.ttf")
+      format("truetype");
+}
+@font-face {
+  font-family: iransansBold;
+  font-style: normal;
+  font-weight: bold;
+  src: url("/fonts/IRANSansWeb_Bold.eot");
+  src: url("/fonts/IRANSansWeb_Bold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-8 */ url("/fonts/IRANSansWeb_Bold.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("/fonts/IRANSansWeb_Bold.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("/fonts/IRANSansWeb_Bold.ttf")
+      format("truetype");
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: iransansLight;
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/IRANSansWeb_Light.eot");
+  src: url("/fonts/IRANSansWeb_Light.eot?#iefix") format("embedded-opentype"),
+    /* IE6-8 */ url("/fonts/IRANSansWeb_Light.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("/fonts/IRANSansWeb_Light.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("/fonts/IRANSansWeb_Light.ttf")
+      format("truetype");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: iransans;
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/IRANSansWeb.eot");
+  src: url("/fonts/IRANSansWeb.eot?#iefix") format("embedded-opentype"),
+    /* IE6-8 */ url("/fonts/IRANSansWeb.woff2") format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/ url("/fonts/IRANSansWeb.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url("/fonts/IRANSansWeb.ttf")
+      format("truetype");
 }
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+  font-family: iransans;
+  direction: rtl;
+  scroll-behavior: smooth;
+  background-image: url("/bg.png");
+
+}
+*{
+  box-sizing: border-box;
+
+  font-weight: normal;
+}
+.font-bold{
+  font-weight: normal;
+  font-family: iransansBold;
+}
+header nav li a{
+  @apply text-gray-700 hover:text-gray-900 transition-colors duration-300;
+}
+h1,h2,h3{
+  font-weight: normal;
+}
+h1 span{
+  color: #e6a51b;
 }
